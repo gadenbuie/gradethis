@@ -46,8 +46,7 @@
 
 
 <meta property="og:title" content="Grade student code against a solution (Legacy) — grade_code" />
-<meta property="og:description" content="
- Please use grade_this_code()." />
+<meta property="og:description" content=" Please use grade_this_code()." />
 
 
 
@@ -79,7 +78,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">gradethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.3.9000</span>
       </span>
     </div>
 
@@ -130,8 +129,7 @@
     </div>
 
     <div class="ref-description">
-    <p><a href='https://lifecycle.r-lib.org/articles/stages.html#superseded'><img src='figures/lifecycle-superseded.svg' alt='[Superseded]' /></a>
- Please use <code><a href='grade_this_code.html'>grade_this_code()</a></code>.</p>
+    <p><a href='https://lifecycle.r-lib.org/articles/stages.html#superseded'><img src='figures/lifecycle-superseded.svg' alt='[Superseded]' /></a> Please use <code><a href='grade_this_code.html'>grade_this_code()</a></code>.</p>
     </div>
 
     <pre class="usage"><span class='fu'>grade_code</span><span class='op'>(</span>
@@ -165,7 +163,11 @@ a known incorrect answer.</p></td>
     </tr>
     <tr>
       <th>allow_partial_matching</th>
-      <td><p>A logical if <code>FALSE</code> don't allow partial matching</p></td>
+      <td><p>A logical. If <code>FALSE</code>, the partial matching of
+argument names is not allowed and e.g. <code><a href='https://rdrr.io/r/stats/Uniform.html'>runif(1, mi = 0)</a></code> will return a
+message indicating that the full formal name <code>min</code> should be used. The
+default is set via the <code>gradethis.allow_partial_matching</code> option, or by
+<code><a href='gradethis_setup.html'>gradethis_setup()</a></code>.</p></td>
     </tr>
     <tr>
       <th>glue_correct</th>
@@ -271,8 +273,8 @@ student submits when it runs <code>grade_code()</code>.</p></li>
 #&gt;         .user_code = user_code)
 #&gt;     legacy_graded(correct = FALSE, message = message)
 #&gt; }
-#&gt; &lt;bytecode: 0x7fd22bc56538&gt;
-#&gt; &lt;environment: 0x7fd22bc59ee0&gt;</div></pre>
+#&gt; &lt;bytecode: 0x7fbe0e3d8c08&gt;
+#&gt; &lt;environment: 0x7fbe0e3da5b0&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
